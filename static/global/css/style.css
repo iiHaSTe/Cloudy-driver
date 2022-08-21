@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    font-size: 15pt;
+}
+
+/* main style of navigation bar */
+.navigation {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #111;
+    background-color: #DADADA5C;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    height: 50px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 17px;
+    box-shadow: 0 0 20px #777;
+}
+
+.navigation button {
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 4px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 5px;
+    color: #272727;
+    transition: .3s;
+}
+
+
+.navigation button span {
+    display: inline-block;
+    width: 23px;
+    height: 2px;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 14pt;
+    color: #111;
+    font-weight: 600;
+}
+.logo::first-letter {
+    font-size: 20pt;
+    color: #117BFF;
+    font-family: cursive;
+}
+
+/* navigation body style (after clicking the nav button) */
+.nav-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: nowrap column;
+    /* padding: 15px; */
+    gap: 16px;
+    transition: all 1s;
+    height: 100vh;
+    background-color: #FFF;
+    width: 80vw;
+}
+
+.nav-body.hidden {
+    left: -100%;
+}
+
+.nav-body ul {
+    overflow: hidden;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 20px;
+    list-style: none;
+    padding: 0px 14px;
+}
+
+.nav-body li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12pt;
+    color: #333;
+}
+
+.nav-body a {
+    text-decoration-color: transparent;
+    font-weight: 300;
+    cursor: none;
+    color: #333;
+}
+
+.nav-body li:hover a {
+    text-decoration-color: #333;
+}
+
+.nav-body div.logo-container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}

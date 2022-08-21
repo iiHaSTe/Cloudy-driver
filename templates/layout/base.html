@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloudy {% block title %}{% endblock title %}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}"/>
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    {% include 'layout/navbar.html' %}
+    {% block body %}{% endblock body %}
+    {% include 'layout/footer.html' %}
+    <script src="{% static 'global/lib/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'global/js/main.js' %}"></script>
+</body>
+</html>

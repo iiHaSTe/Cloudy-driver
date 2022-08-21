@@ -1,0 +1,38 @@
+<nav class="navigation" id="navigation">
+    <span class="logo">Cloudy</span>
+    <button data-target="#nav-body" id="nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+<menu id="nav-body" class="nav-body hidden">
+    <div class="logo-container">
+        <span class="logo">Cloudy</span>
+    </div>
+    <ul>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+        {% if not isHome %}
+        <li href="{% url 'home' %}">
+            <a href="#">Home</a>
+            <i class="fa fa-arrow-right"></i>
+        </li>
+        {% endif %}
+        <li href="#">
+            <a href="#">Why Cloudy</a>
+            <i class="fa fa-arrow-right"></i>
+        </li>
+        <li href="{% url 'login' %}">
+            <a href="#">Getting Started</a>
+            <i class="fa fa-arrow-right"></i>
+        </li>
+        <li href='#'>
+            <a href="#">About</a>
+            <i class="fa fa-arrow-right"></i>
+        </li>
+        <li href="#">
+            <a href="#">Contact</a>
+            <i class="fa fa-arrow-right"></i>
+        </li>
+    </ul>
+</menu>

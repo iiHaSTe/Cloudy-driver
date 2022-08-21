@@ -1,0 +1,79 @@
+{% extends 'layout/base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'page/css/index.css' %}" />
+{% endblock head %}
+
+{% block body %}
+
+<header>
+    <h2>
+        Hi to Cloudy
+    </h2>
+    <p>
+        Cloudy is the best way save your photos and data and share it. <br />
+        <span>
+            <span class="security">securited</span>
+            <span class="easy">easy</span>
+            and <span class="free">free api</span>
+        </span>
+    </p>
+    <a href="{% url 'login' %}">
+        {% if login %}
+            Start now
+        {% else %}
+            Login now
+        {% endif %}
+    </a>
+</header>
+
+<section class="firstText">
+    <img class="icon" src="{% static 'images/checked.png' %}" alt="checked">
+    Cloudy can make you happy :D.<br/>
+    <img class="icon" src="{% static 'images/checked.png' %}" alt="checked">
+    Upload and Download your files and share it.<br/>
+    <img class="icon" src="{% static 'images/checked.png' %}" alt="checked">
+    Free api for images and codes and files.<br/>
+</section>
+
+<section class="features">
+    <h4>Cloudy driving</h4>
+    <div style="--card-color: #00CA34;" class="card">
+        <img class="card-logo" src="{% static 'images/shield.png' %}" alt="protection"/>
+        <p class="card-title">Securited</p>
+        <p class="card-content">
+            If something happens to your device,
+            you don't have to worry about losing files,
+            it's backed up and protected in Cloudy.
+        </p>
+    </div>
+    <div style="--card-color: #00AAFF;" class="card">
+        <img class="card-logo" src="{% static 'images/share.png' %}" alt="protection" />
+        <p class="card-title">Sharable</p>
+        <p class="card-content">
+            Share your files and photos with friends and family.
+        </p>
+    </div>
+    <div style="--card-color: #00FFFF;" class="card">
+        <img class="card-logo" src="{% static 'images/responsive.png' %}" alt="protection" />
+        <p class="card-title">Anywhere</p>
+        <p class="card-content">
+            Access your documents, files, and photos across all your devices—everywhere you go.
+        </p>
+    </div>
+</section>
+
+<section class="more-info">
+    <div class="info">
+        <h3 class="info-title">Protect important
+        files in Personal Vault</h3>
+        <p class="info-content">
+            Keep a copy of your files, photos, and projects in Cloudy.
+            We will always provide you with the best user experience.
+        </p>
+        <!-- <img class="info-img" src="{% static 'images/data_security.jpg' %}" alt="protection"/> -->
+    </div>
+</section>
+
+{% endblock body %}
